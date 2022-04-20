@@ -1,0 +1,177 @@
+*{
+    box-sizing: border-box;
+    /* outline: 1px solid red; */
+}
+
+body {
+    font-family: -apple-system,
+    BlinkMacSystemFont,
+    "Segoe UI",
+    Roboto,
+    Helvetica,
+    Arial,
+    sans-serif,
+    "Apple Color Emoji",
+    "Segoe UI Emoji",
+    "Segoe UI Symbol";
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    overflow: hidden;
+    margin: 0;
+    background-color: #02040a;
+    color: #fff;
+    padding: 1rem;
+}
+
+#form {
+    width: 100%;
+    max-width: 700px;
+}
+
+#form input {
+    width: 100%;
+    padding: 1rem;
+    color: #c3c3c5;
+    font-size: 1.1rem;
+    border: none;
+    border-radius: 7px;
+    background-color: #0e1117;
+    margin-bottom: 2rem;
+    border: 1px solid #1b1f23;
+    box-shadow: 0 15px 40px #0e1117;
+}
+
+#form input:focus{
+    outline: 2px solid #1e6feb;
+
+}
+
+#form input::placeholder{
+    color: #c3c3c5;
+}
+
+.card{
+    background-color: #0e1117;
+    padding: 3rem;
+    border-radius: 15px;
+    display: flex;
+    max-width: 800px;
+    min-width: 600px;
+    border: 1px solid #1b1f23;
+    color: #c3c3c5;
+    box-shadow: 0 15px 40px #0e1117;
+}
+
+.card.error{
+    font-size: 2.5rem;
+    display: flex;
+    justify-content: center;
+}
+
+.profile{
+    display: flex;
+    flex-direction: column;
+}
+
+.avatar{
+    border-radius: 50%;
+    height: 120px;
+    width: 120px;
+    border: 10px solid #02040a;
+}
+
+.social-profiles {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 1rem;
+}
+
+.card a img{
+    filter: invert(99%) sepia(100%) saturate(1%) hue-rotate(43deg) brightness(102%) contrast(101%);
+    cursor: pointer;
+}
+
+.card a img.disabled{
+    filter: invert(82%) sepia(0%) saturate(0%) hue-rotate(54deg) brightness(84%) contrast(86%);
+    cursor: not-allowed;
+}
+
+.user-info{
+    margin-left: 3rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.user-info h2 {
+    margin-top: 0;
+}
+
+.user-info p {
+    margin: 0;
+}
+
+.user-info ul {
+    padding: 0;
+    list-style: none;
+    display: flex;
+    justify-content: space-between;
+    margin-top: 1rem;
+}
+
+.repos {
+    margin-bottom: .5rem;
+    display: flex;
+    flex-wrap: wrap;
+    row-gap: 10px;
+}
+
+.repo{
+    text-decoration: none;
+    color: #f5f5f5;
+    margin-right: 1rem;
+    background-color: #1e6feb;
+    padding: .4rem;
+    font-size: 0.9rem;
+    border-radius: 5px;
+    color: #fff;
+}
+
+@media (max-width: 700px){
+    .card{
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .profile{
+        flex-direction: row;
+        justify-content: space-around;
+    }
+
+    .social-profiles{
+        width: 120px;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    .user-info{
+        margin-left: 0;
+    }
+
+    .repos{
+        display: flex;
+        justify-content: space-evenly;
+    }
+}
+@media (max-width: 600px){
+    .card{
+        padding: 1rem;
+    }
+}
+
+
+
