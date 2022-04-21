@@ -1,24 +1,24 @@
-*{
+* {
     box-sizing: border-box;
 }
 
 body {
     font-family: -apple-system,
-    BlinkMacSystemFont,
-    "Segoe UI",
-    Roboto,
-    Helvetica,
-    Arial,
-    sans-serif,
-    "Apple Color Emoji",
-    "Segoe UI Emoji",
-    "Segoe UI Symbol";
+        BlinkMacSystemFont,
+        "Segoe UI",
+        Roboto,
+        Helvetica,
+        Arial,
+        sans-serif,
+        "Apple Color Emoji",
+        "Segoe UI Emoji",
+        "Segoe UI Symbol";
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
     height: 100vh;
-    overflow: hidden;
+    /* overflow: hidden; */
     margin: 0;
     background-color: #161b22;
     color: #fff;
@@ -43,15 +43,15 @@ body {
     box-shadow: 0 15px 40px #0e1117;
 }
 
-#form input:focus{
+#form input:focus {
     outline: 2px solid #1e6feb;
 }
 
-#form input::placeholder{
+#form input::placeholder {
     color: #c3c3c5;
 }
 
-.card{
+.card {
     background-color: #0e1117;
     padding: 3rem;
     border-radius: 15px;
@@ -63,18 +63,18 @@ body {
     box-shadow: 0 15px 40px #0e1117;
 }
 
-.card.error{
+.card.error {
     font-size: 2.5rem;
     display: flex;
     justify-content: center;
 }
 
-.profile{
+.profile {
     display: flex;
     flex-direction: column;
 }
 
-.avatar{
+.avatar {
     border-radius: 50%;
     height: 120px;
     width: 120px;
@@ -87,17 +87,17 @@ body {
     margin-top: 1rem;
 }
 
-.card a img{
+.card a img {
     filter: invert(99%) sepia(100%) saturate(1%) hue-rotate(43deg) brightness(102%) contrast(101%);
     cursor: pointer;
 }
 
-.card a img.disabled{
+.card a img.disabled {
     filter: invert(82%) sepia(0%) saturate(0%) hue-rotate(54deg) brightness(84%) contrast(86%);
     cursor: not-allowed;
 }
 
-.user-info{
+.user-info {
     margin-left: 3rem;
     display: flex;
     flex-direction: column;
@@ -128,7 +128,7 @@ body {
     row-gap: 10px;
 }
 
-.repo{
+.repo {
     text-decoration: none;
     color: #f5f5f5;
     margin-right: 1rem;
@@ -139,58 +139,63 @@ body {
     color: #fff;
 }
 
-@media (max-width: 700px){
-    .card{
+@media (max-width: 700px) {
+    .card {
         flex-direction: column;
         text-align: center;
     }
 
-    .profile{
+    .profile {
         flex-direction: row;
         justify-content: space-around;
     }
 
-    .social-profiles{
+    .social-profiles {
         width: 120px;
         align-items: center;
         justify-content: space-between;
     }
 
-    .user-info{
+    .user-info {
         margin-left: 0;
     }
 
-    .repos{
+    .repos {
         display: flex;
         justify-content: space-evenly;
     }
 }
-@media (max-width: 600px){
-    body{
-        padding: 0;
+
+@media (max-width: 600px) {
+    body {
+        padding: 8px;
         justify-content: flex-start;
+        overflow: auto;
     }
 
-    #form{
+    #form {
         max-width: 350px;
     }
 
-    .card{
+    .card {
         padding: .8rem;
         max-width: 350px;
         min-width: 250px;
         margin: 0;
     }
 
-    .profile{
+    .profile {
         flex-direction: column;
         align-items: center;
     }
 
-    .social-profiles{
+    .social-profiles {
         margin: .5rem 0;
     }
 }
 
-
-
+@media (max-height: 475px){
+    body{
+        justify-content: flex-start;
+    }
+}
