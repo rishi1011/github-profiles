@@ -18,7 +18,6 @@ body {
     align-items: center;
     justify-content: center;
     height: 100vh;
-    /* overflow: hidden; */
     margin: 0;
     background-color: #161b22;
     color: #fff;
@@ -197,5 +196,9 @@ body {
 @media (max-height: 475px){
     body{
         justify-content: flex-start;
+    }
+
+    .card{
+        padding: .8rem;
     }
 }
