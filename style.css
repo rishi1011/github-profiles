@@ -1,6 +1,6 @@
 *{
     box-sizing: border-box;
-    /* outline: 1px solid red; */
+    outline: 1px solid red;
 }
 
 body {
@@ -169,15 +169,14 @@ body {
 @media (max-width: 600px){
     body{
         padding: 0;
-        overflow: hidden;
     }
 
     #form{
-        max-width: 200px;
+        max-width: 350px;
     }
 
     .card{
-        padding: .5rem;
+        padding: .8rem;
         max-width: 350px;
         min-width: 250px;
         margin: 0;
