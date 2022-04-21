@@ -33,6 +33,7 @@ async function getUserData(username) {
 
     try {
         const res = await axios.get(APIURL + username);
+
         return res.data;
     } catch (err) {
         return null;
@@ -44,6 +45,7 @@ function createUserCard(user) {
     div.classList.add('card');
 
     const twitterLink = `https://twitter.com/${user.twitter_username}`;
+    const blogLink = `https://${user.blog}/`;
 
     div.innerHTML = `
         <div class="profile">
@@ -51,7 +53,7 @@ function createUserCard(user) {
                 <div class="social-profiles">
                     <a href=${user.html_url} target="_blank"><img src="./icons/github.svg" alt=""></a>
                     <a href=${user.twitter_username !== null ? twitterLink : ""} target="_blank"><img src="./icons/twitter.svg" alt="" class=${user.twitter_username !== null ? "" : "disabled"}></a>
-                    <a href=${user.blog !== "" ? user.blog : ""} target="_blank"><img src="./icons/post.svg" alt="" class=${user.blog !== "" ? "" : "disabled"}></a>
+                    <a href=${user.blog !== "" ? blogLink : ""} target="_blank"><img src="./icons/post.svg" alt="" class=${user.blog !== "" ? "" : "disabled"}></a>
                 </div>
             </div>
             <div class="user-info">
