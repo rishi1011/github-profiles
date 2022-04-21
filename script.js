@@ -23,7 +23,6 @@ form.addEventListener('submit', async function (e) {
 async function getUserRepos(username) {
     try {
         const res = await axios.get(APIURL + username + '/repos?sort=created');
-        // console.log(res.data);
         return res.data;
     } catch (err) {
         return null;
@@ -34,7 +33,6 @@ async function getUserData(username) {
 
     try {
         const res = await axios.get(APIURL + username);
-        // console.log(res.data);
         return res.data;
     } catch (err) {
         return null;
